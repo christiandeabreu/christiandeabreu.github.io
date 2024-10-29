@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Christian de Abreu</title>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <!--- Styling -->
+  <link rel="stylesheet" media="screen and (max-width: 850px)" href="assets/css/768_styles.css">
+  <link rel="stylesheet" media="screen and (min-width: 850px)" href="assets/css/styles.css">
+  <link rel="shortcut icon" href="assets/img/favicon.ico" type="image/x-icon">
+  <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
+
+  <!--- Google Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Catamaran:wght@200;300;400;500;600;700;900&display=swap" rel="stylesheet">
+</head>
+<body>
+  <div class = "container">
+    <div class="header-section">
+      <div class="header-frame">
+        <h1> Christian de Abreu</h1>
+        <h2> 👨‍💻Data Scientist / 🔬Bioengineer </h2>
+        <h3> 🇧🇷 São Paulo | 🇺🇸 Philadelphia & NYC </h3>
+        <h3> 🏛 University of Pennsylvania '18/'19 B.S.E & MSE </h3>
+        <a class = "contact-links" href="mailto:christianduffydeabreu@gmail.com">✉️ Email Me</a>
+        <a class = "contact-links" target="_blank" href = "https://www.linkedin.com/in/christian-de-abreu" id="linkedin">🌊 LinkedIn</a>
+        <br>
+        <!--<img class ="logo" src= "assets/img/cda-logo.png" width=80px></a> -->
+      </div>
+
+      <div class="img-frame">
+        <div class="imgslider">
+          <img id="imgslider" src= "">
+        </div> <!-- Image Slider --> 
+      </div> <!-- Image Section --> 
+    </div> <!-- Header Section --> 
+
+    <div class="buttons">
+      <a class = "tab-buttons">To Enjoy <i>(coming soon)</i></a>
+      <a class = "tab-buttons">To Move <i>(coming soon)</i></a>
+      <a class = "tab-buttons">To Listen <i>(coming soon)</i></a>
+    </div><!-- Links --> 
+
+    <div class="content">
+      <p><b>👨‍🔧 Me</b>
+      <br> 
+      Data and bioengineering professional from Brazil with an appetite for the future of healthcare, neuroscience, and education. Expert in data science with experience in wearables for health and fitness, brain-computer interfaces, and computer vision for sports analytics at Intel. Founded Vioo, an edtech platform, to help high schoolers and college students find their future universities and careers.</p> 
+      <br> 
+
+    </div> <!-- Content --> 
+  </div> <!-- Container --> 
+
+
+  <script type="text/javascript">
+    let image = document.getElementById('imgslider');
+    let images = ['assets/img/cda-1.png', 'assets/img/cda-2.png', 'assets/img/cda-3.png', 'assets/img/cda-4.png', 'assets/img/cda-5.png'];
+    //Load initial image
+    let random_init =  Math.floor(Math.random()*images.length);
+    var current_val = random_init;
+    image.src =  images[random_init];
+    
+
+    //Cycler
+    setInterval(function(){
+      let random =  Math.floor(Math.random()*images.length);
+      while (random == current_val){
+        random =  Math.floor(Math.random()*images.length);
+      }
+      image.src =  images[random];
+      current_val = random; //so there are no repeated photos
+    },2000);
+
+  </script>
+
+  <script data-goatcounter="https://christiandebreu.goatcounter.com/count"
+        async src="//gc.zgo.at/count.js"></script>
+</body>
+
+</html>
